@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 import os
 
-st.set_page_config(page_title=Shopee ROAS Dashboard, layout=wide)
+st.set_page_config(page_title="Shopee ROAS Dashboard", layout="wide")
 
 st.title("📊 Shopee ROAS รายชั่วโมง")
 st.caption(fอัปเดตล่าสุด {datetime.now().strftime('%Y-%m-%d %H%M%S')})
