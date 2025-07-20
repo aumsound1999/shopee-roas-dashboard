@@ -1,18 +1,20 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-import os
 
+# ตั้งค่าหน้า Dashboard
 st.set_page_config(page_title="Shopee ROAS Dashboard", layout="wide")
 
+# หัวข้อหน้า
 st.title("📊 Shopee ROAS รายชั่วโมง")
-st.caption(f"อัปเดตล่าสุด {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+st.caption(f"อัปเดตล่าสุด: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-EXCEL_FILE = "sale_roai.xlsx"
+# ลิงก์ Google Sheets -> CSV
+CSV_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmlTPNl11ujFpIeJCDhDeY0aqA3/export?format=csv&gid=1352923982"
 
-if os.path.exists(EXCEL_FILE):
-    df = pd.read_excel(EXCEL_FILE)
+# โหลดข้อมูลจาก Google Sheets
+try:
+    df = pd.read_csv(CSV_URL)
     st.dataframe(df, use_container_width=True)
-else:
-    st.warning(f'ไม่พบไฟล์ `{EXCEL_FILE}` ในโฟลเดอร์ปัจจุบัน')
-
+except Exception as e:
+    st.error(f"ไม่สามารถโหลดข้อมูลได้: {e}")
