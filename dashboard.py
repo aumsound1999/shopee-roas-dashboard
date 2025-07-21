@@ -13,7 +13,7 @@ st.title("📊 Shopee ROAS รายชั่วโมง")
 
 # แสดงเวลาล่าสุด (เวลาไทย)
 th_time = datetime.utcnow() + timedelta(hours=7)
-st.caption(f"⏱️ อัปเดตล่าสุด: {th_time.strftime('%Y-%m-%d %H:%M:%S')} (เวลาประเทศไทย)")
+st.caption(f"🕒 อัปเดตล่าสุด: {th_time.strftime('%Y-%m-%d %H:%M:%S')} (เวลาประเทศไทย)")
 
 # ลิงก์ Google Sheets (.xlsx format)
 EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmITPNI11ujFpJeJCDhDeY0aqA3/export?format=xlsx"
@@ -27,7 +27,7 @@ try:
     gb.configure_default_column(resizable=True, filter=True, sortable=True)
     gb.configure_grid_options(domLayout='normal')
 
-    # ตรึงคอลัมน์แรก (ชื่อคอลัมน์ต้องตรงเป๊ะ)
+    # ตรึงคอลัมน์ (คอลัมน์แรกด้านซ้าย)
     first_col = df.columns[0]
     gb.configure_column(first_col, pinned='left')
 
