@@ -11,6 +11,7 @@ st.set_page_config(page_title="Shopee ROAS Dashboard", layout="wide")
 st.title("📊 Shopee ROAS รายชั่วโมง")
 th_time = datetime.utcnow() + timedelta(hours=7)
 st.caption(f"อัปเดตล่าสุด: {th_time.strftime('%Y-%m-%d %H:%M:%S')} (เวลาประเทศไทย)")
+st.dataframe(df, height=1000, use_container_width=True)
 
 # ลิงก์ Google Sheets (.xlsx format)
 EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmlTPNl11ujFpIeJCDhDeY0aqA3/export?format=xlsx"
