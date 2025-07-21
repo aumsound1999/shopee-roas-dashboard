@@ -18,8 +18,8 @@ EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmlTPNl11ujFpIeJCDhDeY
 
 try:
     df = pd.read_excel(EXCEL_URL)
-    st.dataframe(df, use_container_width=True)
+    #st.dataframe(df, use_container_width=True)
+    st.dataframe(df, height=1000, use_container_width=True)
 except Exception as e:
     st.error(f"ไม่สามารถโหลดข้อมูลได้: {e}")
     
-st.dataframe(df, height=1000, use_container_width=True)
