@@ -16,7 +16,8 @@ th_time = datetime.utcnow() + timedelta(hours=7)
 st.caption(f"🕒 อัปเดตล่าสุด: {th_time.strftime('%Y-%m-%d %H:%M:%S')} (เวลาประเทศไทย)")
 
 # ลิงก์ Google Sheets (.xlsx format)
-EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmITPNI11ujFpJeJCDhDeY0aqA3/export?format=xlsx"
+#EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmITPNI11ujFpJeJCDhDeY0aqA3/export?format=xlsx"
+EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmlTPNl11ujFpIeJCDhDeY0aqA3/export?format=xlsx"
 
 # โหลดและแสดงข้อมูล
 try:
