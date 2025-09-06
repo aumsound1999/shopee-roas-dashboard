@@ -17,7 +17,7 @@ st.caption(f"🕒 อัปเดตล่าสุด: {th_time.strftime('%Y-%m
 
 # ลิงก์ Google Sheets (.xlsx format)
 #EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmITPNI11ujFpJeJCDhDeY0aqA3/export?format=xlsx"
-EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Db2MuqmlTPNl11ujFpIeJCDhDeY0aqA3/export?format=xlsx"
+EXCEL_URL = "https://docs.google.com/spreadsheets/d/1dQcv31UYWHoiDquNT2-vKROyvSww_k59/export?format=xlsx"
 
 # โหลดและแสดงข้อมูล
 try:
@@ -39,3 +39,4 @@ try:
 
 except Exception as e:
     st.error(f"ไม่สามารถโหลดข้อมูลได้: {e}")
+
